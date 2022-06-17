@@ -4,7 +4,7 @@ const mongoose = require("mongoose");
 const router = require("./routes/book-routes");
 const app = express();
 
-// app.use(cors());
+app.use(cors());
 app.use(express.json()); // it coversts  all file into json file which to be added
 
 app.use("/books", router); // http://localhost:5000/books

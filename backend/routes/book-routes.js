@@ -24,4 +24,5 @@ module.exports = router;
 //   "description": "mindset about money earning",
 //   "price": 500,
 //   "avilable":true
+//    "image" : ""
 // }

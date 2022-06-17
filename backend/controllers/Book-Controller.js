@@ -62,7 +62,7 @@ const updateBook = async (req, res, next) => {
       .status(404)
       .json({ massage: "No Book Found of this id to update" });
   }
-  return res.status(200).json({ book, info: "Book Updated Successfully" });
+  return res.status(200).json({ message: "Book Updated Successfully" });
 };
 
 const deleteBook = async (req, res, next) => {
@@ -76,6 +76,6 @@ const deleteBook = async (req, res, next) => {
   if (!book) {
     return res.status(404).json({ message: "book not found by this id" });
   }
-  return res.status(200).json({ book, info: "Book Deleted Successfully" });
+  return res.status(200).json({ message: "Book Deleted Successfully" });
 };
 module.exports = { getAllBooks, addBook, getById, updateBook, deleteBook };
