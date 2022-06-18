@@ -43,7 +43,7 @@ const addBook = async (req, res, next) => {
   if (!book) {
     return res.status(500).json({ massage: "Unable to Add" }); //500 server error
   }
-  return res.status(201).json({ book, info: "Book Added Successfully" }); //201=created status
+  return res.status(201).json({ message: "Book Added Successfully" }); //201=created status
 };
 
 const updateBook = async (req, res, next) => {
@@ -62,7 +62,7 @@ const updateBook = async (req, res, next) => {
       .status(404)
       .json({ massage: "No Book Found of this id to update" });
   }
-  return res.status(200).json({ message: "Book Updated Successfully" });
+  return res.status(200).json(book);
 };
 
 const deleteBook = async (req, res, next) => {
