@@ -2,11 +2,12 @@ import React, { useState } from "react";
 import { AppBar, Tab, Tabs, Toolbar, Typography } from "@mui/material";
 import MenuBookIcon from "@mui/icons-material/MenuBook";
 import { NavLink } from "react-router-dom";
+import "./Navbar.css";
 const Navbar = () => {
   const [value, setValue] = useState(0);
   return (
     <div>
-      <AppBar position="sticky" sx={{ backgroundColor: " grey" }}>
+      <AppBar position="sticky" className="navbar">
         <Toolbar>
           <Typography>
             <MenuBookIcon />

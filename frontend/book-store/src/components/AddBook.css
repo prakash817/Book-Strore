@@ -1,3 +1,14 @@
 .fullWidth {
   margin: 10px;
 }
+.AddBook {
+  width: 700px;
+  margin: auto;
+  /* padding: 10px; */
+  background: linear-gradient(to top, #3f5efb, #fc466b);
+  padding: 15px;
+}
+
+.box {
+  gap: 15px;
+}

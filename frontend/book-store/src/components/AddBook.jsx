@@ -42,79 +42,84 @@ const AddBook = () => {
     });
     await history("/books");
 
-    console.log(bookData);
+    // console.log(bookData);
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <Box
-        display="flex"
-        flexDirection="column"
-        justifyContent={"center"}
-        maxWidth={700}
-        alignContent={"center"}
-        alignSelf="center"
-        marginLeft={"auto"}
-        marginRight="auto"
-        marginTop={10}
-      >
-        <TextField
-          fullWidth
-          label="Name Of Book"
-          className="fullWidth"
-          value={bookData.name}
-          name="name"
-          onChange={handleChange}
-        />
-        <TextField
-          fullWidth
-          label="Enter Auther Name"
-          className="fullWidth"
-          value={bookData.author}
-          name="author"
-          onChange={handleChange}
-        />
-        <TextField
-          fullWidth
-          label="Enter Book Description"
-          className="fullWidth"
-          value={bookData.description}
-          name="description"
-          onChange={handleChange}
-        />
-        <TextField
-          fullWidth
-          label="Enter Book Price"
-          type="number"
-          className="fullWidth"
-          value={bookData.price}
-          name="price"
-          onChange={handleChange}
-        />
-        <TextField
-          fullWidth
-          label="Enter Image Link"
-          className="fullWidth"
-          value={bookData.image}
-          name="image"
-          onChange={handleChange}
-        />
-        <FormControlLabel
-          control={
-            <Checkbox checked={checked} onChange={() => setChecked(!checked)} />
-          }
-          label="Available"
-        />
-        <Button
-          type="submit"
-          variant="contained"
-          className="fullWidth"
-          sx={{ margin: "auto" }}
+    <div className="AddBook">
+      <form onSubmit={handleSubmit}>
+        <Box
+          className="box"
+          display="flex"
+          flexDirection="column"
+          justifyContent={"center"}
+          maxWidth={700}
+          alignContent={"center"}
+          marginLeft={"auto"}
+          marginRight="auto"
+          marginTop={10}
         >
-          Add Book
-        </Button>
-      </Box>
-    </form>
+          <TextField
+            fullWidth
+            label="Name Of Book"
+            className="fullWidth"
+            value={bookData.name}
+            name="name"
+            onChange={handleChange}
+          />
+          <TextField
+            fullWidth
+            label="Enter Auther Name"
+            className="fullWidth"
+            value={bookData.author}
+            name="author"
+            onChange={handleChange}
+          />
+          <TextField
+            fullWidth
+            label="Enter Book Description"
+            className="fullWidth"
+            value={bookData.description}
+            name="description"
+            onChange={handleChange}
+          />
+          <TextField
+            fullWidth
+            label="Enter Book Price"
+            type="number"
+            className="fullWidth"
+            value={bookData.price}
+            name="price"
+            onChange={handleChange}
+          />
+          <TextField
+            fullWidth
+            label="Enter Image Link"
+            className="fullWidth"
+            value={bookData.image}
+            name="image"
+            onChange={handleChange}
+          />
+          <FormControlLabel
+            control={
+              <Checkbox
+                checked={checked}
+                onChange={() => setChecked(!checked)}
+              />
+            }
+            label="Available"
+          />
+          <Button
+            type="submit"
+            variant="contained"
+            className="fullWidth"
+            sx={{ margin: "auto" }}
+          >
+            Add Book
+          </Button>
+        </Box>
+      </form>
+    </div>
   );
 };
 
