@@ -3,6 +3,7 @@ const cors = require("cors");
 const mongoose = require("mongoose");
 const router = require("./routes/book-routes");
 const app = express();
+const PORT =proces.env.PORT || 5000;
 
 app.use(cors());
 app.use(express.json()); // it coversts  all file into json file which to be added
@@ -23,6 +24,6 @@ mongoose
 
 // password = >PHIuXkHo48MfkWlx
 
-// app.listen(8080, () => {
+// app.listen(PORT, () => {
 //   console.log("server connected on port http://localhost:5000/");
 // });
